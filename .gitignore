@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.preview/
+*.log
+*.zip
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+# Original image collection supplied separately; the website uses images/.
+museum/
