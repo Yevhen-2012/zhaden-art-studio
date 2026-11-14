@@ -588,6 +588,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .secyion-form_form .contact-form-notice {
@@ -896,15 +897,16 @@
 .footer-link {
   color: var(--grey-color);
   letter-spacing: 2px;
-  text-transform: uppercase;
   font-family: Coves, sans-serif;
   font-size: 25px;
   font-weight: 600;
-  text-decoration: none;
+  text-align: center;
 }
 
 .button-text-footer {
+  margin: 0;
   font-size: 16px;
+  text-align: center;
 }
 
 .background {
@@ -1020,6 +1022,13 @@
   grid-auto-columns: 1fr;
   width: 100%;
   display: grid;
+}
+
+.content_img-wraper > .contacts_img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .team-img {
