@@ -85,6 +85,10 @@ html:has(.gallery-viewer[open]) {
   border-top: 1px solid var(--viewer-line);
 }
 
+.gallery-viewer__footer .gallery-viewer__control {
+  align-self: end;
+}
+
 .gallery-viewer__caption {
   max-width: 58ch;
   margin: 0;
