@@ -954,21 +954,10 @@
   display: flex;
 }
 
-.conacts_link {
-  color: var(--grey-color);
-  text-decoration: none;
-}
-
-.button-text-contacts {
+.contact-updates {
+  margin-top: 0;
   font-size: 18px;
-}
-
-.link-line-contacts {
-  background-color: var(--grey-color);
-  width: 140%;
-  height: 1px;
-  position: relative;
-  left: -20%;
+  text-align: center;
 }
 
 .h-3-contacts {
@@ -1764,11 +1753,6 @@
   .content_main-wraper {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .link-line-contacts {
-    width: 100%;
-    left: auto;
   }
 
   .contacts_form-form {
