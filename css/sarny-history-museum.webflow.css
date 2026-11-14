@@ -911,7 +911,7 @@
 
 .contact-updates,
 .button-text-footer,
-.contacts_button-main[type="submit"] {
+[data-contact-form] input[type="submit"] {
   cursor: pointer;
 }
 
