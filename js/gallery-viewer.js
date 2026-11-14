@@ -64,9 +64,26 @@
     });
   });
 
-  close.addEventListener('click', () => viewer.close());
-  viewer.querySelector('.gallery-viewer__previous').addEventListener('click', () => showPhoto(currentIndex - 1));
-  viewer.querySelector('.gallery-viewer__next').addEventListener('click', () => showPhoto(currentIndex + 1));
+  function bindControl(button, activate) {
+    let touch;
+    button.addEventListener('pointerdown', event => {
+      touch = event.pointerType === 'touch' && event.isPrimary
+        ? { id: event.pointerId, x: event.clientX, y: event.clientY }
+        : undefined;
+    });
+    button.addEventListener('pointerup', event => {
+      if (touch?.id !== event.pointerId) return;
+      if (Math.hypot(event.clientX - touch.x, event.clientY - touch.y) < 12) activate();
+    });
+    button.addEventListener('click', event => {
+      // A touch tap can omit the click after a swipe. Keyboard and mouse still use click.
+      if (event.detail === 0 || !touch) activate();
+    });
+  }
+
+  bindControl(close, () => viewer.close());
+  bindControl(viewer.querySelector('.gallery-viewer__previous'), () => showPhoto(currentIndex - 1));
+  bindControl(viewer.querySelector('.gallery-viewer__next'), () => showPhoto(currentIndex + 1));
 
   viewer.addEventListener('close', () => {
     swipe = undefined;
