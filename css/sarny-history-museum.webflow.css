@@ -909,6 +909,26 @@
   text-align: center;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .contact-updates,
+  .button-text-footer {
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  }
+
+  .contact-updates:hover,
+  .button-text-footer:hover {
+    background-color: var(--grey-color);
+    color: #fffefe;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-updates,
+  .button-text-footer {
+    transition: none;
+  }
+}
+
 .background {
   z-index: -11;
   background-image: url('../images/main-bacground.jpg');
